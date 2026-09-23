@@ -18,29 +18,31 @@ const {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <div class="flex flex-wrap justify-center -m-4 text-center">
-    {
-      stats &&
-        stats.map(({ amount, title, icon }) => (
-          <div class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center md:border-r md:border-gray-200 md:last:border-none dark:md:border-slate-500 intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
-            {icon && (
-              <div class="flex items-center justify-center mx-auto mb-4 text-primary">
-                <Icon name={icon} class="w-10 h-10" />
-              </div>
-            )}
-            {amount && (
-              <div class="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
-                {amount}
-              </div>
-            )}
-            {title && (
-              <div class="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
-                {title}
-              </div>
-            )}
-          </div>
-        ))
-    }
+  <div
+    class="rounded-xl border border-[#DDD8D0] shadow-lg px-6 py-8 md:px-10 md:py-10 dark:border-[#2E4A6E] dark:shadow-[0_0_0_1px_rgba(245,240,232,0.12),0_8px_32px_rgba(0,0,0,0.5)]"
+  >
+    <Headline title={title} subtitle={subtitle} tagline={tagline} />
+    <div class="flex flex-wrap justify-center -m-4 text-center">
+      {
+        stats &&
+          stats.map(({ amount, title, icon }) => (
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-55 text-center md:border-r md:border-[#C8C3BB] md:last:border-none dark:md:border-[#243552] intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
+              {icon && (
+                <div class="flex items-center justify-center mx-auto mb-4 text-primary">
+                  <Icon name={icon} class="w-10 h-10" />
+                </div>
+              )}
+              {amount && (
+                <div class="font-heading text-primary text-[2.6rem] font-bold dark:text-[#F5F0E8] lg:text-5xl xl:text-6xl">
+                  {amount}
+                </div>
+              )}
+              {title && (
+                <div class="text-sm font-medium uppercase tracking-widest text-muted lg:text-base">{title}</div>
+              )}
+            </div>
+          ))
+      }
+    </div>
   </div>
 </WidgetWrapper>
