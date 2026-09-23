@@ -1,0 +1,50 @@
+---
+// QBEE brand fonts: Arial/Helvetica system stack — no webfont files required
+// (see qbee_brand_assets/README.md, "Τυπογραφία").
+---
+
+<style is:inline>
+  :root {
+    --aw-font-sans: Arial, Helvetica, sans-serif;
+    --aw-font-serif: Arial, Helvetica, sans-serif;
+    --aw-font-heading: Arial, Helvetica, sans-serif;
+
+    /* QBEE palette — see qbee_brand_assets/qbee-web-brand-tokens.css */
+    --aw-color-primary: rgb(32 43 44); /* Charcoal #202B2C */
+    --aw-color-secondary: rgb(97 112 113); /* Slate #617071 */
+    --aw-color-accent: rgb(196 232 107); /* Lime #C4E86B */
+    --aw-color-accent-ink: rgb(32 43 44); /* Charcoal text on Lime — brand rule: never green text on white */
+
+    --aw-color-text-heading: rgb(32 43 44);
+    --aw-color-text-default: rgb(32 43 44);
+    --aw-color-text-muted: rgb(32 43 44 / 66%);
+    --aw-color-bg-page: rgb(244 245 239); /* Paper #F4F5EF */
+
+    --aw-color-bg-page-dark: rgb(32 43 44); /* Charcoal #202B2C */
+
+    ::selection {
+      background-color: rgb(196 232 107 / 50%);
+    }
+  }
+
+  .dark {
+    --aw-font-sans: Arial, Helvetica, sans-serif;
+    --aw-font-serif: Arial, Helvetica, sans-serif;
+    --aw-font-heading: Arial, Helvetica, sans-serif;
+
+    --aw-color-primary: rgb(244 245 239); /* Paper, for contrast against Charcoal bg */
+    --aw-color-secondary: rgb(216 222 218); /* Mist #D8DEDA */
+    --aw-color-accent: rgb(196 232 107); /* Lime — same in light & dark */
+    --aw-color-accent-ink: rgb(32 43 44); /* always Charcoal on Lime */
+
+    --aw-color-text-heading: rgb(244 245 239);
+    --aw-color-text-default: rgb(244 245 239);
+    --aw-color-text-muted: rgb(244 245 239 / 66%);
+    --aw-color-bg-page: rgb(32 43 44);
+
+    ::selection {
+      background-color: rgb(196 232 107);
+      color: rgb(32 43 44);
+    }
+  }
+</style>

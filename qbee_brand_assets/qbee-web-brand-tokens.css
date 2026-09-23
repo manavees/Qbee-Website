@@ -1,0 +1,27 @@
+:root {
+  --qbee-charcoal: #202b2c;
+  --qbee-paper: #f4f5ef;
+  --qbee-lime: #c4e86b;
+  --qbee-slate: #617071;
+  --qbee-mist: #d8deda;
+  --qbee-white: #ffffff;
+  --qbee-font-display: Arial, Helvetica, sans-serif;
+  --qbee-font-body: Arial, Helvetica, sans-serif;
+  --qbee-background: var(--qbee-paper);
+  --qbee-text: var(--qbee-charcoal);
+  --qbee-border: var(--qbee-mist);
+  --qbee-radius: 4px;
+}
+.qbee-button {
+  background: var(--qbee-lime);
+  color: var(--qbee-charcoal);
+}
+.qbee-link {
+  color: var(--qbee-charcoal);
+  text-decoration: underline;
+}
+.qbee-button:focus-visible,
+.qbee-link:focus-visible {
+  outline: 2px solid var(--qbee-charcoal);
+  outline-offset: 4px;
+}
