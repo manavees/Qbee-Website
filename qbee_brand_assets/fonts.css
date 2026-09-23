@@ -1,0 +1,5 @@
+@font-face { font-family: 'Inter Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('./fonts/InterDisplay-Bold.woff2') format('woff2'); }
+@font-face { font-family: 'Inter Display'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/InterDisplay-Medium.woff2') format('woff2'); }
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/Lato-Medium.woff2') format('woff2'); }
+body { font-weight: 500; }
+h1, h2, .brand-wordmark { font-weight: 700; }

@@ -1,50 +1,74 @@
 ---
-// QBEE brand fonts: Arial/Helvetica system stack — no webfont files required
+// QBEE brand fonts: Inter Display (headings) + Lato (body).
+// Font files live in public/fonts/ — copied from qbee_brand_assets/fonts/
 // (see qbee_brand_assets/README.md, "Τυπογραφία").
 ---
 
 <style is:inline>
+  @font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/InterDisplay-Bold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter Display';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/InterDisplay-Medium.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Lato-Medium.woff2') format('woff2');
+  }
+
   :root {
-    --aw-font-sans: Arial, Helvetica, sans-serif;
-    --aw-font-serif: Arial, Helvetica, sans-serif;
-    --aw-font-heading: Arial, Helvetica, sans-serif;
+    --aw-font-sans: 'Lato', Arial, Helvetica, sans-serif;
+    --aw-font-serif: 'Lato', Arial, Helvetica, sans-serif;
+    --aw-font-heading: 'Inter Display', Arial, Helvetica, sans-serif;
 
-    /* QBEE palette — see qbee_brand_assets/qbee-web-brand-tokens.css */
-    --aw-color-primary: rgb(32 43 44); /* Charcoal #202B2C */
-    --aw-color-secondary: rgb(97 112 113); /* Slate #617071 */
-    --aw-color-accent: rgb(196 232 107); /* Lime #C4E86B */
-    --aw-color-accent-ink: rgb(32 43 44); /* Charcoal text on Lime — brand rule: never green text on white */
+    /* QBEE palette v2 — see qbee_brand_assets/qbee-web-brand-tokens.css */
+    --aw-color-primary: rgb(15 27 45); /* Deep Navy #0F1B2D */
+    --aw-color-secondary: rgb(26 26 46); /* Near Black #1A1A2E */
+    --aw-color-accent: rgb(
+      15 27 45
+    ); /* Deep Navy — no distinct accent hue in the QBEE palette; CTAs stay navy in both themes */
+    --aw-color-accent-ink: rgb(255 255 255); /* White text on the navy accent */
 
-    --aw-color-text-heading: rgb(32 43 44);
-    --aw-color-text-default: rgb(32 43 44);
-    --aw-color-text-muted: rgb(32 43 44 / 66%);
-    --aw-color-bg-page: rgb(244 245 239); /* Paper #F4F5EF */
+    --aw-color-text-heading: rgb(15 27 45); /* Deep Navy */
+    --aw-color-text-default: rgb(26 26 46); /* Near Black */
+    --aw-color-text-muted: rgb(107 114 128); /* Slate Gray #6B7280 */
+    --aw-color-bg-page: rgb(245 240 232); /* Warm Cream #F5F0E8 */
 
-    --aw-color-bg-page-dark: rgb(32 43 44); /* Charcoal #202B2C */
+    --aw-color-bg-page-dark: rgb(15 27 45); /* Deep Navy #0F1B2D */
 
     ::selection {
-      background-color: rgb(196 232 107 / 50%);
+      background-color: rgb(15 27 45 / 20%);
     }
   }
 
   .dark {
-    --aw-font-sans: Arial, Helvetica, sans-serif;
-    --aw-font-serif: Arial, Helvetica, sans-serif;
-    --aw-font-heading: Arial, Helvetica, sans-serif;
+    --aw-font-sans: 'Lato', Arial, Helvetica, sans-serif;
+    --aw-font-serif: 'Lato', Arial, Helvetica, sans-serif;
+    --aw-font-heading: 'Inter Display', Arial, Helvetica, sans-serif;
 
-    --aw-color-primary: rgb(244 245 239); /* Paper, for contrast against Charcoal bg */
-    --aw-color-secondary: rgb(216 222 218); /* Mist #D8DEDA */
-    --aw-color-accent: rgb(196 232 107); /* Lime — same in light & dark */
-    --aw-color-accent-ink: rgb(32 43 44); /* always Charcoal on Lime */
+    --aw-color-primary: rgb(245 240 232); /* Warm Cream, for contrast against Navy bg */
+    --aw-color-secondary: rgb(221 216 208); /* Warm Gray #DDD8D0 */
+    --aw-color-accent: rgb(15 27 45); /* Deep Navy — CTAs stay navy in both themes */
+    --aw-color-accent-ink: rgb(255 255 255); /* White text on the navy accent */
 
-    --aw-color-text-heading: rgb(244 245 239);
-    --aw-color-text-default: rgb(244 245 239);
-    --aw-color-text-muted: rgb(244 245 239 / 66%);
-    --aw-color-bg-page: rgb(32 43 44);
+    --aw-color-text-heading: rgb(245 240 232); /* Warm Cream */
+    --aw-color-text-default: rgb(221 216 208); /* Warm Gray */
+    --aw-color-text-muted: rgb(245 240 232 / 66%);
+    --aw-color-bg-page: rgb(15 27 45); /* Deep Navy */
 
     ::selection {
-      background-color: rgb(196 232 107);
-      color: rgb(32 43 44);
+      background-color: rgb(245 240 232 / 30%);
     }
   }
 </style>

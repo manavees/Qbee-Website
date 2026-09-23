@@ -1,79 +1,161 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Επικοινωνία',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
+  <HeroText
+    tagline="Επικοινωνία"
+    title="Ας μιλήσουμε"
+    subtitle="Αν θέλετε να συζητήσουμε μια ευκαιρία συνεργασίας ή απλώς να γνωριστούμε, στείλτε μας μήνυμα."
   />
 
-  <!-- Features2 Widget ************** -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-xl mx-auto px-4 sm:px-6">
+      <div
+        class="rounded-lg border border-[#DDD8D0] dark:border-[#243552] bg-[#EAE5DC] dark:bg-[#162438] shadow-md dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] p-6 sm:p-8"
+      >
+        <form id="contact-form" novalidate>
+          <!--
+            TODO: this form will not deliver messages until this placeholder is replaced.
+            Get a free access key at https://web3forms.com/ — enter info@qbd.gr, no account
+            needed, the key arrives by email instantly. Paste it below in place of the placeholder.
+          -->
+          <input type="hidden" name="access_key" value="REPLACE_WITH_QBEE_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="Νέο μήνυμα από qbd.gr" />
+          <input type="hidden" name="from_name" value="QBEE Website" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+
+          <div class="mb-6">
+            <label for="name" class="block text-sm font-medium mb-1">Όνομα</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              autocomplete="name"
+              class="py-3 px-4 block w-full text-md rounded-lg border border-[#C8C3BB] dark:border-[#2E4A6E] bg-white dark:bg-[#162438] dark:text-[#E8E3DB] focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+              class="py-3 px-4 block w-full text-md rounded-lg border border-[#C8C3BB] dark:border-[#2E4A6E] bg-white dark:bg-[#162438] dark:text-[#E8E3DB] focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="message" class="block text-sm font-medium mb-1">Μήνυμα</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="py-3 px-4 block w-full text-md rounded-lg border border-[#C8C3BB] dark:border-[#2E4A6E] bg-white dark:bg-[#162438] dark:text-[#E8E3DB] focus:outline-none focus:ring-2 focus:ring-primary"
+            ></textarea>
+          </div>
+
+          <div class="mb-6 flex items-start gap-3">
+            <input id="disclaimer" type="checkbox" required class="mt-1 cursor-pointer" />
+            <label for="disclaimer" class="text-sm text-gray-600 dark:text-gray-400 cursor-pointer select-none">
+              Συμφωνώ με την επεξεργασία των προσωπικών μου δεδομένων σύμφωνα με την
+              <a href="/privacy" class="underline hover:text-primary">Πολιτική Απορρήτου</a> για σκοπούς επικοινωνίας.
+            </label>
+          </div>
+
+          <div
+            id="form-success"
+            class="hidden mb-4 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 text-sm"
+          >
+            Το μήνυμά σας εστάλη. Θα επικοινωνήσουμε σύντομα.
+          </div>
+          <div
+            id="form-error"
+            class="hidden mb-4 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 text-sm"
+          >
+            Κάτι πήγε στραβά. Δοκιμάστε ξανά ή στείλτε email στο info@qbd.gr.
+          </div>
+
+          <button
+            type="submit"
+            id="submit-btn"
+            class="w-full py-3 px-6 rounded-lg font-semibold border border-[#0F1B2D] bg-[#0F1B2D] text-white hover:bg-[#182A44] hover:border-[#182A44] dark:border-[#2E4A6E] dark:bg-[#0F1B2D] dark:text-[#F5F0E8] dark:hover:bg-[#162438] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            Αποστολή
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <Features2
-    title="We are here to help!"
+    title="Στοιχεία Επικοινωνίας"
+    columns={2}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
         title: 'Email',
-        description: 'contact@support.com',
+        description: '<a href="mailto:info@qbd.gr" class="hover:text-primary transition-colors">info@qbd.gr</a>',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Έδρα',
+        description:
+          '<a href="https://www.google.com/maps/search/?api=1&query=Ανθυπολοχαγού+Ταγάρη+6+Θεσσαλονίκη+54248" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Ανθυπολοχαγού Ταγάρη 6, Θεσσαλονίκη 54248, Ελλάδα</a>',
         icon: 'tabler:map-pin',
       },
     ]}
   />
 </Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const successMsg = document.getElementById('form-success') as HTMLDivElement;
+  const errorMsg = document.getElementById('form-error') as HTMLDivElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const disclaimer = form.querySelector<HTMLInputElement>('#disclaimer');
+    if (!disclaimer?.checked) {
+      disclaimer?.reportValidity();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Αποστολή...';
+    successMsg.classList.add('hidden');
+    errorMsg.classList.add('hidden');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        successMsg.classList.remove('hidden');
+        form.reset();
+      } else {
+        errorMsg.classList.remove('hidden');
+      }
+    } catch {
+      errorMsg.classList.remove('hidden');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Αποστολή';
+    }
+  });
+</script>

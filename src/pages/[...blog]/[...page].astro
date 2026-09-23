@@ -3,11 +3,10 @@ import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
-// import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import { getPermalink } from '~/utils/permalinks';
 
 export const prerender = true;
 
@@ -20,11 +19,9 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
-// const allCategories = await findCategories();
-// const allTags = await findTags();
-
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Νέα & Ανακοινώσεις${currentPage > 1 ? ` — Σελίδα ${currentPage}` : ''}`,
+  description: 'Αναλύσεις, ενημερώσεις και σκέψεις από την ομάδα της QBEE.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -37,16 +34,65 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
-    >
-      The Blog
-    </Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-    <!--
-      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
-      <PostTags tags={allTags}  title="Search by Tags:" />
-    -->
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold uppercase tracking-widest text-primary dark:text-blue-200 mb-3">Blog</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-4 dark:text-white">
+        Νέα & Ανακοινώσεις
+      </h1>
+      <p class="text-xl text-muted dark:text-slate-400 max-w-2xl mx-auto">
+        Αναλύσεις, ενημερώσεις και σκέψεις από την ομάδα της QBEE.
+      </p>
+    </div>
+
+    {
+      page.data.length > 0 ? (
+        <>
+          <BlogList posts={page.data} />
+          <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+        </>
+      ) : (
+        <div class="flex flex-col items-center justify-center text-center py-16 px-6">
+          <div class="w-16 h-16 rounded-full bg-primary dark:bg-[#162438] flex items-center justify-center mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8 text-white dark:text-[#F5F0E8]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
+              />
+            </svg>
+          </div>
+
+          <h2 class="text-2xl font-bold dark:text-white mb-3">Σύντομα νέα άρθρα</h2>
+          <p class="text-muted dark:text-slate-400 max-w-lg mb-8">
+            Ετοιμάζουμε αναλύσεις και ενημερώσεις για την ανάπτυξη ακινήτων.
+          </p>
+
+          <a
+            href={getPermalink('/contact')}
+            class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Επικοινωνήστε μαζί μας
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+      )
+    }
   </section>
 </Layout>

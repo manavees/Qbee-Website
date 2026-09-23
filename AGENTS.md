@@ -97,6 +97,54 @@ Post frontmatter: `title` (required), `publishDate`, `updateDate`, `draft`, `exc
 
 Hero images use `loading="eager"` and `fetchpriority="high"`.
 
+## Brand Identity (QBEE)
+
+The site's visual identity (colors, fonts, logos, favicons) is sourced from
+`qbee_brand_assets/` (source/reference folder, checked into the repo root —
+see `qbee_brand_assets/README.md` for the full spec in Greek). That folder is
+the single source of truth for brand assets; regenerate/replace its files if
+the brand changes, then re-run the steps below to re-wire the site.
+
+**Palette** (defined as CSS variables in `src/components/CustomStyles.astro`,
+consumed via Tailwind's `@theme` mapping in `src/assets/styles/tailwind.css`):
+
+| Token         | Light                                                               | Dark                 |
+| ------------- | ------------------------------------------------------------------- | -------------------- |
+| primary       | Deep Navy `#0F1B2D`                                                 | Warm Cream `#F5F0E8` |
+| secondary     | Near Black `#1A1A2E`                                                | Warm Gray `#DDD8D0`  |
+| accent (CTAs) | Deep Navy (same both themes — no separate accent hue in this brand) | Deep Navy            |
+| accent-ink    | White (text on the navy accent)                                     | White                |
+| text-muted    | Slate Gray `#6B7280`                                                | Cream 66%            |
+| bg-page       | Warm Cream `#F5F0E8`                                                | Deep Navy `#0F1B2D`  |
+
+There is no distinct "accent" hue in the QBEE brand (unlike the previous
+Manavees brass accent) — CTA buttons stay navy-on-cream/white in both themes.
+In dark mode the accent bg equals the dark page bg, so `btn-primary` adds a
+`dark:border-white/20` for definition (see `tailwind.css`).
+
+**Fonts:** Inter Display (Bold 700 for h1/h2/`.brand-wordmark`, Medium 500
+available) for headings, Lato Medium 500 for body. Static `.woff2` files live
+in `public/fonts/` (copied from `qbee_brand_assets/fonts/`) and are declared
+via `@font-face` directly in `CustomStyles.astro` — no `@fontsource` package
+is used for this brand.
+
+**Logos/favicons:** `public/brand/*.svg` (logo-horizontal, logo-horizontal-dark-bg,
+logo-compact, logo-compact-dark-bg, icon) and the favicon/OG files at the
+`public/` root are copies of the matching `qbee-*-transparent.svg` / PNG files
+in `qbee_brand_assets/`. `src/components/Logo.astro` and `Favicons.astro`
+reference these paths directly; `src/assets/images/default.png` (the default
+OG image) is a copy of `qbee_brand_assets/qbee-og-image.png`.
+
+**Known gap:** most page content under `src/pages/` (index, about, sectors,
+contact, company-info, privacy, terms, cookies, the blog listing) still has
+literal leftover "Manavees" copy, `manavees.com` email addresses, and
+placeholder ΑΦΜ/ΓΕΜΗ in `src/navigation.ts` — carried over verbatim from the
+Manavees site this was scaffolded from. The contact form in `contact.astro`
+also still posts to a Web3Forms `access_key` that belongs to Manavees, so
+submissions currently would not reach QBEE. None of this has been rewritten
+yet; it needs real QBEE business copy/facts (not something to invent) before
+launch.
+
 ## Verification Checklist
 
 After changes, always verify:

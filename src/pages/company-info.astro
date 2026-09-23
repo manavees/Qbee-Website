@@ -1,0 +1,437 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Στοιχεία Εταιρίας — QBEE Ι.Κ.Ε.',
+  description: 'Νομικά στοιχεία και οικονομικές καταστάσεις της QBEE Ι.Κ.Ε.',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="ci-page">
+    <div class="ci-container">
+      <!-- Header Card -->
+      <div class="ci-header">
+        <div class="ci-header__top">
+          <div class="ci-avatar">
+            <img src="/brand/icon.svg" alt="QBEE" class="w-full h-full object-cover" />
+          </div>
+          <div class="ci-header__meta">
+            <h1 class="ci-header__name">QBEE Ι.Κ.Ε.</h1>
+            <p class="ci-header__gemi">ΓΕΜΗ: 195732204000</p>
+          </div>
+          <span class="ci-badge ci-badge--active">ΕΝΕΡΓΗ</span>
+        </div>
+        <div class="ci-header__sub">
+          <span class="ci-kad">
+            <span class="ci-kad__code">68.10.00.00</span>
+            ΔΙΑΧΕΙΡΙΣΗ ΙΔΙΟΚΤΗΤΩΝ ΑΚΙΝΗΤΩΝ ΚΑΙ ΑΝΑΠΤΥΞΗ ΟΙΚΟΔΟΜΙΚΩΝ ΣΧΕΔΙΩΝ
+          </span>
+          <div class="ci-header__contacts">
+            <a href="mailto:info@qbd.gr" class="ci-contact-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
+                  d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+              >
+              info@qbd.gr
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Details -->
+      <div class="ci-card">
+        <h2 class="ci-card__title">Στοιχεία Εταιρίας</h2>
+        <dl class="ci-dl">
+          <div class="ci-dl__row">
+            <dt>Νομική Μορφή</dt>
+            <dd>ΙΔΙΩΤΙΚΗ ΚΕΦΑΛΑΙΟΥΧΙΚΗ ΕΤΑΙΡΕΙΑ (Ι.Κ.Ε.)</dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>Εταιρικό Κεφάλαιο</dt>
+            <dd>€9.000</dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>Ημερομηνία Σύστασης</dt>
+            <dd>31/08/2026</dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>Επιμελητήριο</dt>
+            <dd>Εμπορικό &amp; Βιομηχανικό Επιμελητήριο Θεσσαλονίκης</dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>ΓΕΜΗ</dt>
+            <dd>
+              <a
+                href="https://publicity.businessportal.gr/company/195732204000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ci-link">195732204000 ↗</a
+              >
+            </dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>ΑΦΜ</dt>
+            <dd>803382970</dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>Έδρα</dt>
+            <dd>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Ανθυπολοχαγού+Ταγάρη+6+Θεσσαλονίκη+54248"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ci-link">Ανθυπολοχαγού Ταγάρη 6, Θεσσαλονίκη 54248, Ελλάδα ↗</a
+              >
+            </dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto:info@qbd.gr" class="ci-link">info@qbd.gr</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Activity codes -->
+      <div class="ci-card">
+        <h2 class="ci-card__title">Δραστηριότητες (ΚΑΔ)</h2>
+        <dl class="ci-dl">
+          <div class="ci-dl__row">
+            <dt>Κύρια</dt>
+            <dd>68.10 — Διαχείριση ιδιόκτητων ακινήτων και ανάπτυξη οικοδομικών σχεδίων</dd>
+          </div>
+          <div class="ci-dl__row">
+            <dt>Δευτερεύουσες</dt>
+            <dd>
+              68.20 — Εκμίσθωση και διαχείριση ιδιόκτητων ή μισθωμένων ακινήτων<br />
+              68.30 — Διαχείριση ακίνητης περιουσίας έναντι αμοιβής ή βάσει σύμβασης<br />
+              41.00 — Κατασκευή κτιρίων για κατοικίες και μη<br />
+              52.21.24.00 — Υπηρεσίες χώρων στάθμευσης<br />
+              55.10 — Ξενοδοχειακές υπηρεσίες και παρόμοιες υπηρεσίες παροχής καταλύματος<br />
+              55.20 — Καταλύματα διακοπών και άλλα καταλύματα σύντομης διαμονής
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Capital Breakdown -->
+      <div class="ci-card">
+        <h2 class="ci-card__title">Κεφάλαιο</h2>
+        <div class="ci-capital">
+          <div class="ci-capital__bar">
+            <div class="ci-capital__fill" style="width:100%"></div>
+          </div>
+          <div class="ci-capital__rows">
+            <div class="ci-capital__row">
+              <div class="ci-capital__dot ci-capital__dot--a"></div>
+              <span class="ci-capital__label">Κεφαλαιακές Εισφορές</span>
+              <span class="ci-capital__value">€9.000</span>
+            </div>
+          </div>
+          <div class="ci-capital__total">
+            <span>Σύνολο</span>
+            <span>€9.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partners / Management -->
+      <div class="ci-card">
+        <h2 class="ci-card__title">Εταίροι &amp; Διαχείριση</h2>
+        <div class="ci-partners">
+          <div class="ci-partner">
+            <div class="ci-partner__avatar">MN</div>
+            <div class="ci-partner__info">
+              <p class="ci-partner__name">Manavees Ι.Κ.Ε.</p>
+              <p class="ci-partner__role">ΕΤΑΙΡΟΣ – ΜΕΛΟΣ</p>
+            </div>
+            <div class="ci-partner__stake">
+              <span class="ci-stake-badge">1/3</span>
+            </div>
+          </div>
+          <div class="ci-partner">
+            <div class="ci-partner__avatar">ΙΤ</div>
+            <div class="ci-partner__info">
+              <p class="ci-partner__name">Ιωάννης Τσίγκας</p>
+              <p class="ci-partner__role">ΜΕΛΟΣ &amp; ΔΙΑΧΕΙΡΙΣΤΗΣ</p>
+            </div>
+            <div class="ci-partner__stake">
+              <span class="ci-stake-badge">1/3</span>
+            </div>
+          </div>
+          <div class="ci-partner">
+            <div class="ci-partner__avatar">ΒΚ</div>
+            <div class="ci-partner__info">
+              <p class="ci-partner__name">Βασίλειος Κώτσος</p>
+              <p class="ci-partner__role">ΜΕΛΟΣ &amp; ΔΙΑΧΕΙΡΙΣΤΗΣ</p>
+            </div>
+            <div class="ci-partner__stake">
+              <span class="ci-stake-badge">1/3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registry Timeline -->
+      <div class="ci-card">
+        <h2 class="ci-card__title">Ιστορικό ΓΕΜΗ</h2>
+        <ol class="ci-timeline">
+          <li class="ci-timeline__item">
+            <div class="ci-timeline__dot"></div>
+            <div class="ci-timeline__body">
+              <time class="ci-timeline__date">31/08/2026</time>
+              <p class="ci-timeline__text">Σύσταση εταιρίας μέσω e-ΥΜΣ</p>
+              <a
+                href="https://publicity.businessportal.gr/company/195732204000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ci-link ci-link--sm">Δες στο ΓΕΜΗ ↗</a
+              >
+            </div>
+          </li>
+          <li class="ci-timeline__item">
+            <div class="ci-timeline__dot"></div>
+            <div class="ci-timeline__body">
+              <time class="ci-timeline__date">15/09/2026</time>
+              <p class="ci-timeline__text">
+                Καταχώρηση απόφασης για την πιστοποίηση καταβολής αρχικού εταιρικού κεφαλαίου
+              </p>
+              <a
+                href="https://publicity.businessportal.gr/company/195732204000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ci-link ci-link--sm">Δες στο ΓΕΜΗ ↗</a
+              >
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Financial Statements Notice -->
+      <div class="ci-notice">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="ci-notice__icon"
+          ><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg
+        >
+        <div>
+          <p class="ci-notice__text">
+            Η εταιρία βρίσκεται στο πρώτο έτος λειτουργίας της (2026). Οι πρώτες δημοσιευμένες οικονομικές καταστάσεις
+            θα είναι διαθέσιμες μέσω του ΓΕΜΗ μετά τη λήξη της πρώτης χρήσης. Οι ετήσιες οικονομικές καταστάσεις
+            καταρτίζονται σύμφωνα με τα Ελληνικά Λογιστικά Πρότυπα (Ν. 4308/2014).
+          </p>
+          <a
+            href="https://publicity.businessportal.gr/company/195732204000"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ci-link">Αναζήτηση στο ΓΕΜΗ ↗</a
+          >
+        </div>
+      </div>
+
+      <p class="ci-back"><a href={getPermalink('/')}>← Αρχική</a></p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @reference "../assets/styles/tailwind.css";
+
+  .ci-page {
+    @apply py-16 lg:py-24 min-h-screen bg-[#F5F0E8] dark:bg-[#0F1B2D];
+  }
+  .ci-container {
+    @apply mx-auto max-w-2xl px-4 sm:px-6 flex flex-col gap-5;
+  }
+
+  /* Header */
+  .ci-header {
+    @apply rounded-2xl border border-[#DDD8D0] dark:border-[#243552] bg-white dark:bg-[#162438] px-6 py-5 shadow-sm dark:shadow-[0_0_0_1px_rgba(166,124,82,0.08),0_4px_16px_rgba(0,0,0,0.4)];
+  }
+  .ci-header__top {
+    @apply flex items-start gap-4 mb-4;
+  }
+  .ci-avatar {
+    @apply shrink-0 w-12 h-12 rounded-xl overflow-hidden;
+  }
+  .ci-header__meta {
+    @apply flex-1 min-w-0;
+  }
+  .ci-header__name {
+    @apply text-sm font-semibold text-[#1A1A2E] dark:text-[#F5F0E8] leading-snug;
+  }
+  .ci-header__gemi {
+    @apply text-xs text-[#6B7280] dark:text-[#9CA3AF] mt-0.5;
+  }
+  .ci-badge {
+    @apply shrink-0 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+  .ci-badge--active {
+    @apply bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 dark:bg-emerald-900/20 dark:text-emerald-400 dark:ring-emerald-800;
+  }
+  .ci-badge--active::before {
+    content: '';
+    @apply w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 inline-block;
+  }
+  .ci-header__sub {
+    @apply flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[#DDD8D0] dark:border-[#243552];
+  }
+  .ci-kad {
+    @apply text-xs text-[#6B7280] dark:text-[#9CA3AF];
+  }
+  .ci-kad__code {
+    @apply font-mono font-semibold text-[#1A1A2E] dark:text-[#DDD8D0] mr-1.5;
+  }
+  .ci-header__contacts {
+    @apply flex items-center gap-3;
+  }
+  .ci-contact-link {
+    @apply inline-flex items-center gap-1.5 text-xs text-[#6B7280] dark:text-[#9CA3AF] hover:text-primary dark:hover:text-[#A67C52] transition-colors;
+  }
+
+  /* Cards */
+  .ci-card {
+    @apply rounded-2xl border border-[#DDD8D0] dark:border-[#243552] bg-white dark:bg-[#162438] px-6 py-5 shadow-sm dark:shadow-[0_0_0_1px_rgba(166,124,82,0.08),0_4px_16px_rgba(0,0,0,0.4)];
+  }
+  .ci-card__title {
+    @apply text-xs font-bold uppercase tracking-widest text-[#6B7280] dark:text-[#9CA3AF] mb-4;
+  }
+
+  /* Definition list */
+  .ci-dl {
+    @apply divide-y divide-[#DDD8D0] dark:divide-[#243552] -mx-6 border-t border-[#DDD8D0] dark:border-[#243552];
+  }
+  .ci-dl__row {
+    @apply grid grid-cols-5 gap-4 px-6 py-3 text-sm;
+  }
+  .ci-dl__row dt {
+    @apply col-span-2 text-[#6B7280] dark:text-[#9CA3AF];
+  }
+  .ci-dl__row dd {
+    @apply col-span-3 text-[#1A1A2E] dark:text-[#F5F0E8] font-medium;
+  }
+
+  /* Capital */
+  .ci-capital__bar {
+    @apply h-2 rounded-full bg-[#DDD8D0] dark:bg-[#162438] overflow-hidden mb-4;
+  }
+  .ci-capital__fill {
+    @apply h-full bg-primary rounded-full;
+  }
+  .ci-capital__rows {
+    @apply flex flex-col gap-2 mb-4;
+  }
+  .ci-capital__row {
+    @apply flex items-center gap-2 text-sm;
+  }
+  .ci-capital__dot {
+    @apply w-2.5 h-2.5 rounded-full shrink-0;
+  }
+  .ci-capital__dot--a {
+    @apply bg-primary;
+  }
+  .ci-capital__label {
+    @apply flex-1 text-[#6B7280] dark:text-[#9CA3AF];
+  }
+  .ci-capital__value {
+    @apply font-semibold text-[#1A1A2E] dark:text-[#F5F0E8];
+  }
+  .ci-capital__total {
+    @apply flex justify-between text-sm font-semibold text-[#1A1A2E] dark:text-[#F5F0E8] pt-3 border-t border-[#DDD8D0] dark:border-[#243552];
+  }
+
+  /* Partners */
+  .ci-partners {
+    @apply flex flex-col gap-3;
+  }
+  .ci-partner {
+    @apply flex items-center gap-4 rounded-xl border border-[#DDD8D0] dark:border-[#243552] bg-[#F5F0E8] dark:bg-[#162438] px-4 py-3;
+  }
+  .ci-partner__avatar {
+    @apply w-10 h-10 rounded-full bg-primary dark:bg-[#162438] text-white dark:text-[#F5F0E8] text-xs font-bold flex items-center justify-center shrink-0;
+  }
+  .ci-partner__info {
+    @apply flex-1 min-w-0;
+  }
+  .ci-partner__name {
+    @apply text-sm font-semibold text-[#1A1A2E] dark:text-[#F5F0E8];
+  }
+  .ci-partner__role {
+    @apply text-xs text-[#6B7280] dark:text-[#9CA3AF] mt-0.5;
+  }
+  .ci-stake-badge {
+    @apply inline-block rounded-lg bg-[#EAE5DC] dark:bg-[#162438] px-3 py-1 text-sm font-bold text-[#0F1B2D] dark:text-[#F5F0E8];
+  }
+
+  /* Timeline */
+  .ci-timeline {
+    @apply flex flex-col gap-0 relative;
+  }
+  .ci-timeline__item {
+    @apply flex gap-4 relative pb-6 last:pb-0;
+  }
+  .ci-timeline__item:not(:last-child)::before {
+    content: '';
+    @apply absolute left-1.75 top-4 w-px bg-[#DDD8D0] dark:bg-[#243552];
+    bottom: 0;
+  }
+  .ci-timeline__dot {
+    @apply w-4 h-4 rounded-full border-2 border-primary bg-white dark:bg-[#162438] shrink-0 mt-0.5 relative z-10;
+  }
+  .ci-timeline__body {
+    @apply flex-1 min-w-0;
+  }
+  .ci-timeline__date {
+    @apply block text-xs font-semibold text-[#6B7280] dark:text-[#9CA3AF] mb-0.5;
+  }
+  .ci-timeline__text {
+    @apply text-sm text-[#1A1A2E] dark:text-[#F5F0E8];
+  }
+
+  /* Links */
+  .ci-link {
+    @apply text-primary dark:text-[#A67C52] hover:underline transition-colors;
+  }
+  .ci-link--sm {
+    @apply text-xs mt-1 inline-block;
+  }
+
+  /* Notice */
+  .ci-notice {
+    @apply flex gap-3 rounded-2xl border border-[#C8A96E] dark:border-[#243552] bg-[#FBF7EE] dark:bg-[#162438] px-5 py-4 text-sm;
+  }
+  .ci-notice__icon {
+    @apply shrink-0 text-[#A67C52] mt-0.5;
+  }
+  .ci-notice__text {
+    @apply text-[#6B4C1A] dark:text-[#D4A96A] mb-2;
+  }
+
+  /* Back */
+  .ci-back {
+    @apply pt-2;
+  }
+  .ci-back a {
+    @apply text-sm text-[#6B7280] dark:text-[#9CA3AF] hover:text-primary dark:hover:text-[#F5F0E8] transition-colors;
+  }
+</style>

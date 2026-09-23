@@ -1,306 +1,254 @@
 [
   {
     "file": "android-chrome-192x192.png",
-    "bytes": 3684,
-    "width": 192,
-    "height": 192
+    "bytes": 3989
   },
   {
     "file": "android-chrome-512x512.png",
-    "bytes": 13782,
-    "width": 512,
-    "height": 512
+    "bytes": 14596
   },
   {
     "file": "apple-touch-icon.png",
-    "bytes": 2559,
-    "width": 180,
-    "height": 180
+    "bytes": 3680
   },
   {
     "file": "favicon-16x16.png",
-    "bytes": 355,
-    "width": 16,
-    "height": 16
+    "bytes": 346
   },
   {
     "file": "favicon-180x180.png",
-    "bytes": 3263,
-    "width": 180,
-    "height": 180
+    "bytes": 3680
   },
   {
     "file": "favicon-192x192.png",
-    "bytes": 3684,
-    "width": 192,
-    "height": 192
+    "bytes": 3989
   },
   {
     "file": "favicon-32x32.png",
-    "bytes": 602,
-    "width": 32,
-    "height": 32
+    "bytes": 652
   },
   {
     "file": "favicon-512x512.png",
-    "bytes": 13782,
-    "width": 512,
-    "height": 512
+    "bytes": 14596
   },
   {
     "file": "favicon-64x64.png",
-    "bytes": 1096,
-    "width": 64,
-    "height": 64
+    "bytes": 1246
   },
   {
     "file": "favicon.ico",
-    "bytes": 20273
+    "bytes": 23761
   },
   {
     "file": "favicon.png",
-    "bytes": 602,
-    "width": 32,
-    "height": 32
+    "bytes": 652
   },
   {
     "file": "favicon.svg",
-    "bytes": 498
+    "bytes": 808
+  },
+  {
+    "file": "fonts.css",
+    "bytes": 557
   },
   {
     "file": "icon.png",
-    "bytes": 37641,
-    "width": 1024,
-    "height": 1024
+    "bytes": 38891
   },
   {
     "file": "icon.svg",
-    "bytes": 498
+    "bytes": 808
   },
   {
     "file": "logo-compact.png",
-    "bytes": 17214,
-    "width": 1600,
-    "height": 900
+    "bytes": 15641
   },
   {
     "file": "logo-compact.svg",
-    "bytes": 824
+    "bytes": 1513
   },
   {
     "file": "logo-dark-bg.png",
-    "bytes": 46187,
-    "width": 1600,
-    "height": 900
+    "bytes": 43348
   },
   {
     "file": "logo-dark-bg.svg",
-    "bytes": 1019
+    "bytes": 4613
   },
   {
     "file": "logo.png",
-    "bytes": 21773,
-    "width": 1600,
-    "height": 900
+    "bytes": 18266
   },
   {
     "file": "logo.svg",
-    "bytes": 976
+    "bytes": 4565
   },
   {
     "file": "og-image.png",
-    "bytes": 36493,
-    "width": 1200,
-    "height": 630
+    "bytes": 40325
   },
   {
     "file": "og-image.svg",
-    "bytes": 1316
+    "bytes": 28810
   },
   {
     "file": "qbee-brand-mini-sheet.png",
-    "bytes": 105248,
-    "width": 1400,
-    "height": 1160
+    "bytes": 68696
   },
   {
     "file": "qbee-brand-mini-sheet.svg",
-    "bytes": 4045
+    "bytes": 81431
   },
   {
-    "file": "qbee-icon-rounded-charcoal.png",
-    "bytes": 37641,
-    "width": 1024,
-    "height": 1024
+    "file": "qbee-icon-rounded-navy.png",
+    "bytes": 38891
   },
   {
-    "file": "qbee-icon-rounded-charcoal.svg",
-    "bytes": 498
+    "file": "qbee-icon-rounded-navy.svg",
+    "bytes": 808
   },
   {
-    "file": "qbee-logo-compact-charcoal.png",
-    "bytes": 41357,
-    "width": 1600,
-    "height": 900
+    "file": "qbee-logo-compact-cream.png",
+    "bytes": 40756
   },
   {
-    "file": "qbee-logo-compact-charcoal.svg",
-    "bytes": 867
+    "file": "qbee-logo-compact-cream.svg",
+    "bytes": 1561
   },
   {
-    "file": "qbee-logo-compact-paper.png",
-    "bytes": 41361,
-    "width": 1600,
-    "height": 900
+    "file": "qbee-logo-compact-navy.png",
+    "bytes": 40251
   },
   {
-    "file": "qbee-logo-compact-paper.svg",
-    "bytes": 867
+    "file": "qbee-logo-compact-navy.svg",
+    "bytes": 1561
   },
   {
     "file": "qbee-logo-compact-transparent.png",
-    "bytes": 17214,
-    "width": 1600,
-    "height": 900
+    "bytes": 15641
   },
   {
     "file": "qbee-logo-compact-transparent.svg",
-    "bytes": 824
+    "bytes": 1513
   },
   {
     "file": "qbee-logo-compact-white-transparent.png",
-    "bytes": 13628,
-    "width": 1600,
-    "height": 900
+    "bytes": 12887
   },
   {
     "file": "qbee-logo-compact-white-transparent.svg",
-    "bytes": 824
+    "bytes": 1513
   },
   {
-    "file": "qbee-logo-horizontal.png",
-    "bytes": 14595,
-    "width": 1000,
-    "height": 330
+    "file": "qbee-logo-primary-cream.png",
+    "bytes": 43562
   },
   {
-    "file": "qbee-logo-horizontal.svg",
-    "bytes": 947
+    "file": "qbee-logo-primary-cream.svg",
+    "bytes": 4613
   },
   {
-    "file": "qbee-logo-mono-black.png",
-    "bytes": 18683,
-    "width": 1600,
-    "height": 900
+    "file": "qbee-logo-primary-navy.png",
+    "bytes": 43348
   },
   {
-    "file": "qbee-logo-mono-black.svg",
-    "bytes": 976
-  },
-  {
-    "file": "qbee-logo-primary-charcoal.png",
-    "bytes": 46187,
-    "width": 1600,
-    "height": 900
-  },
-  {
-    "file": "qbee-logo-primary-charcoal.svg",
-    "bytes": 1019
-  },
-  {
-    "file": "qbee-logo-primary-paper.png",
-    "bytes": 46185,
-    "width": 1600,
-    "height": 900
-  },
-  {
-    "file": "qbee-logo-primary-paper.svg",
-    "bytes": 1019
+    "file": "qbee-logo-primary-navy.svg",
+    "bytes": 4613
   },
   {
     "file": "qbee-logo-primary-transparent.png",
-    "bytes": 21773,
-    "width": 1600,
-    "height": 900
+    "bytes": 18266
   },
   {
     "file": "qbee-logo-primary-transparent.svg",
-    "bytes": 976
+    "bytes": 4565
   },
   {
     "file": "qbee-logo-primary-white-transparent.png",
-    "bytes": 17214,
-    "width": 1600,
-    "height": 900
+    "bytes": 15141
   },
   {
     "file": "qbee-logo-primary-white-transparent.svg",
-    "bytes": 976
+    "bytes": 4565
   },
   {
-    "file": "qbee-monogram-q-paper.png",
-    "bytes": 32813,
-    "width": 1024,
-    "height": 1024
+    "file": "qbee-monogram-q-cream.png",
+    "bytes": 37207
   },
   {
-    "file": "qbee-monogram-q-paper.svg",
-    "bytes": 472
+    "file": "qbee-monogram-q-cream.svg",
+    "bytes": 787
   },
   {
     "file": "qbee-monogram-q-transparent.png",
-    "bytes": 14306,
-    "width": 1024,
-    "height": 1024
+    "bytes": 17709
   },
   {
     "file": "qbee-monogram-q-transparent.svg",
-    "bytes": 428
+    "bytes": 738
   },
   {
     "file": "qbee-monogram-q-white-transparent.png",
-    "bytes": 10920,
-    "width": 1024,
-    "height": 1024
+    "bytes": 13596
   },
   {
     "file": "qbee-monogram-q-white-transparent.svg",
-    "bytes": 428
+    "bytes": 738
   },
   {
     "file": "qbee-og-image.png",
-    "bytes": 36493,
-    "width": 1200,
-    "height": 630
+    "bytes": 40325
   },
   {
     "file": "qbee-og-image.svg",
-    "bytes": 1316
+    "bytes": 28810
   },
   {
     "file": "qbee-social-profile-icon.png",
-    "bytes": 34867,
-    "width": 1024,
-    "height": 1024
+    "bytes": 42208
   },
   {
     "file": "qbee-social-profile-icon.svg",
-    "bytes": 472
+    "bytes": 808
   },
   {
     "file": "qbee-web-brand-tokens.css",
-    "bytes": 665
+    "bytes": 547
   },
   {
     "file": "README.md",
-    "bytes": 6042
+    "bytes": 4746
   },
   {
     "file": "site.webmanifest",
-    "bytes": 451
+    "bytes": 435
   },
   {
     "file": "web-head.html",
-    "bytes": 815
+    "bytes": 911
+  },
+  {
+    "file": "fonts/Inter-LICENSE.txt",
+    "bytes": 4380
+  },
+  {
+    "file": "fonts/InterDisplay-Bold.woff2",
+    "bytes": 113556
+  },
+  {
+    "file": "fonts/InterDisplay-Medium.woff2",
+    "bytes": 113476
+  },
+  {
+    "file": "fonts/Lato-Medium.ttf",
+    "bytes": 637068
+  },
+  {
+    "file": "fonts/Lato-Medium.woff2",
+    "bytes": 207812
+  },
+  {
+    "file": "fonts/Lato-OFL.txt",
+    "bytes": 4399
   }
 ]

@@ -1,27 +1,25 @@
+/* QBEE brand tokens */
 :root {
-  --qbee-charcoal: #202b2c;
-  --qbee-paper: #f4f5ef;
-  --qbee-lime: #c4e86b;
-  --qbee-slate: #617071;
-  --qbee-mist: #d8deda;
-  --qbee-white: #ffffff;
-  --qbee-font-display: Arial, Helvetica, sans-serif;
-  --qbee-font-body: Arial, Helvetica, sans-serif;
-  --qbee-background: var(--qbee-paper);
-  --qbee-text: var(--qbee-charcoal);
-  --qbee-border: var(--qbee-mist);
-  --qbee-radius: 4px;
+  --qbee-navy: #0f1b2d;
+  --qbee-cream: #f5f0e8;
+  --qbee-text: #1a1a2e;
+  --qbee-muted: #6b7280;
+  --qbee-border: #ddd8d0;
+
+  --qbee-font-display: 'Inter Display', 'Inter', system-ui, sans-serif;
+  --qbee-font-body: 'Lato', 'Inter', system-ui, sans-serif;
 }
-.qbee-button {
-  background: var(--qbee-lime);
-  color: var(--qbee-charcoal);
+
+body {
+  background: var(--qbee-cream);
+  color: var(--qbee-text);
+  font-family: var(--qbee-font-body);
 }
-.qbee-link {
-  color: var(--qbee-charcoal);
-  text-decoration: underline;
-}
-.qbee-button:focus-visible,
-.qbee-link:focus-visible {
-  outline: 2px solid var(--qbee-charcoal);
-  outline-offset: 4px;
+
+h1,
+h2,
+.brand-wordmark {
+  font-family: var(--qbee-font-display);
+  letter-spacing: 0.12em;
+  color: var(--qbee-navy);
 }
